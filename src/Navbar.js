@@ -1,21 +1,53 @@
 import {Link, useMatch, useResolvedPath} from "react-router-dom"
-
+import {
+    CNavbarNav,
+    CNavbar,
+    CContainer,
+    CNavbarBrand,
+    CNavbarToggler,
+    CCollapse,
+    CNavItem,
+    CNavLink
+} from '@coreui/react';
+import {useState} from "react";
 export default function Navbar() {
+    const [visible, setVisible] = useState(false)
     return (
-        <nav className="nav">
-            <Link to="/" className="site-title">
-                Главная
-            </Link>
-            <ul>
-                <CustomLink to="/about">Обо мне</CustomLink>
-                <CustomLink to="/calculator">Задание №1</CustomLink>
-                <CustomLink to="/slides">Задание №2</CustomLink>
-                <CustomLink to="/scenario">Задание №3</CustomLink>
-                <CustomLink to="/roundabout">Задание №4</CustomLink>
-                <CustomLink to="/shop">Задание №5</CustomLink>
-            </ul>
-        </nav>
+        <>
+            <CNavbar expand="lg" colorScheme="dark" className="bg-dark">
+                <CContainer fluid>
+                    <CNavbarBrand href="/">Главная</CNavbarBrand>
+                    <CNavbarToggler
+                        aria-label="Toggle navigation"
+                        aria-expanded={visible}
+                        onClick={() => setVisible(!visible)}
+                    />
+                    <CCollapse className="navbar-collapse" visible={visible}>
+                        <CNavbarNav>
+                            <CNavItem>
+                                <CNavLink href="/about" active>
+                                    Обо мне
+                                </CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/calculator">Калькулятор</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/slides">Слайдшоу</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/shop">Магазин</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/test">Тест</CNavLink>
+                            </CNavItem>
+                        </CNavbarNav>
+                    </CCollapse>
+                </CContainer>
+            </CNavbar>
+        </>
     )
+
 }
 
 function CustomLink({to, children, ...props}) {

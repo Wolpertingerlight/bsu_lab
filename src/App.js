@@ -4,9 +4,8 @@ import AboutMe from "./pages/AboutMe/AboutMe";
 import Calculator from "./pages/Calculator/Calculator";
 import Slides from "./pages/Slides/Slides";
 import Shop from "./pages/Shop/Shop";
-import Roundabout from "./pages/Roundabout/Roundabout";
-import Scenario from "./pages/Scenario/Scenario";
 import Home from "./pages/Home/Home";
+import Test from "./pages/test/Test";
 
 function App() {
     return (
@@ -18,9 +17,8 @@ function App() {
                     <Route path="/about" element={<AboutMe/>}/>
                     <Route path="/calculator" element={<Calculator/>}/>
                     <Route path="/slides" element={<Slides/>}/>
-                    <Route path="/scenario" element={<Scenario/>}/>
-                    <Route path="/roundabout" element={<Roundabout/>}/>
                     <Route path="/shop" element={<Shop/>}/>
+                    <Route path="/test" element={<Test/>}/>
                 </Routes>
             </div>
         </>

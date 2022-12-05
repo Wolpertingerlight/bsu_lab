@@ -8,8 +8,8 @@ function Slides() {
         {url: 'images/slide_4.jpg', title: '4'},
     ];
     const containerStyle = {
-        width: "1000px",
-        height: "680px",
+        width: "700px",
+        height: "480px",
         margin: "0 auto"
     }
     return (

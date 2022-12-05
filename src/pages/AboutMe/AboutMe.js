@@ -1,63 +1,93 @@
 import "./AboutMe.css"
+import {CButton, CCard, CCardBody, CCardFooter, CCardHeader, CCardImage, CCardText, CCardTitle} from "@coreui/react";
 
 function AboutMe() {
     return (
-        <div className={"main_container"}>
-            <div className={"main_container_left_block"}>
-                <div className={"main_container_left_block_main"}>
-                    <h2 className={"main_container_left_block_main_title"}>Основное</h2>
-                    <p><span className={"main_container_left_block_main_FIO"}>ФИО: </span>
-                        <span>Исхаков Камиль Робертович</span></p>
-                    <p><span className={"main_container_left_block_main_sex"}>Пол: </span>
-                        <span>Мужской</span></p>
-                    <p className={"main_container_left_block_main_span_3"}><span
-                        className={"main_container_left_block_main_date"}>Дата рождения: </span>
-                        <span>06.08.2000</span></p>
-                </div>
-                <div className={"main_container_left_block_education"}>
-                    <h2 className={"main_container_left_block_education_title"}>Образование</h2>
-                    <p className={"for_border_left"}><h3
-                        className={"main_container_left_block_education_title_part"}>Бакалавриат</h3>
-                        <p><span className={"main_container_left_block_education_building"}>Учебное заведение: </span>
-                            <span>Башкирский государственный университет (БашГУ)</span></p>
-                        <p><span className={"main_container_left_block_education_faculty"}>Факультет: </span>
+        // style={{ maxWidth: '18rem' }}
+        <div className={"main_container"}
+             style={{"width":"100%", "display": "grid", "grid-template-columns":"70% 30%","grid-gap": "10px"}}
+        >
+            <div>
+                <CCard color='dark'  textColor='white' className="mb-3">
+                    <CCardHeader>Основное</CCardHeader>
+                    <CCardBody>
+                        {/*<CCardTitle> Основное</CCardTitle>*/}
+                        <CCardText>
+                            <p><span>ФИО: </span>
+                                <span>Бикзянов Алмас Аликович</span></p>
+                            <p><span>Пол: </span>
+                                <span>Мужской</span></p>
+                            <p><span>Дата рождения: </span>
+                                <span>18.10.2000</span></p>
+
+                        </CCardText>
+                    </CCardBody>
+                </CCard>
+
+            <CCard color='dark'  textColor='white' className="mb-3">
+                <CCardHeader>Образование</CCardHeader>
+                <p className={"for_border_left"}>
+                <CCardBody>
+                    <CCardTitle>Бакалавриат</CCardTitle>
+                    <CCardText>
+                        <p><span>Учебное заведение: </span>
+                            <span>Башкирский государственный университет</span></p>
+                        <p><span>Факультет: </span>
                             <span>Математики и информационных технологий</span></p>
-                        <p><span className={"main_container_left_block_education_speciality"}>Специальность: </span>
+                        <p><span>Специальность: </span>
                             <span>Прикладная информатика</span></p>
-                        <p><span className={"main_container_left_block_education_date"}>Период обучения: </span>
-                            <span>2018 - 2022 гг.</span></p>
-                    </p>
-                    <p className={"for_border_left"}><h3
-                        className={"main_container_left_block_education_title_part"}>Магистратура</h3>
-                        <p><span className={"main_container_left_block_education_building"}>Учебное заведение: </span>
-                            <span>Башкирский государственный университет (БашГУ)</span></p>
-                        <p><span className={"main_container_left_block_education_faculty"}>Факультет: </span>
-                            <span>Математики и информационных технологий</span></p>
-                        <p><span className={"main_container_left_block_education_speciality"}>Специальность: </span>
-                            <span>Прикладная информатика</span></p>
-                        <p><span className={"main_container_left_block_education_date"}>Период обучения: </span>
-                            <span>2022 - 2024 гг.</span></p>
-                    </p>
-                    <br></br>
-                </div>
-                <div className={"main_container_left_block_contacts"}>
-                    <h2 className={"main_container_left_block_contacts_title"}>Контакты</h2>
-                    <p><span className={"main_container_left_block_contacts_number_text"}>Телефон: </span>
-                        <span className={"main_container_left_block_contacts_number"}>+7 (999) 999 99-99</span>
-                    </p>
-                    <p className={"main_container_left_block_main_span_3"}>
-                        <span className={"main_container_left_block_contacts_email_text"}>email: </span>
-                        <span className={"main_container_left_block_contacts_email"}>example@gmail.com</span>
-                    </p>
-                </div>
+                        <p><span>Период обучения: </span>
+                            <span>2018 - 2022</span></p>
+
+                    </CCardText>
+                </CCardBody>
+                </p>
+
+                <p className={"for_border_left"}>
+                    <CCardBody>
+                        <CCardTitle>Магистратура</CCardTitle>
+                        <CCardText>
+                            <p><span>Учебное заведение: </span>
+                                <span>Башкирский государственный университет</span></p>
+                            <p><span>Факультет: </span>
+                                <span>Математики и информационных технологий</span></p>
+                            <p><span>Специальность: </span>
+                                <span>Прикладная информатика</span></p>
+                            <p><span>Период обучения: </span>
+                                <span>2022 - н.в.</span></p>
+
+                        </CCardText>
+                    </CCardBody>
+                </p>
+            </CCard>
+
+            <CCard color='dark'  textColor='white' className="mb-3">
+                <CCardHeader>Контакты</CCardHeader>
+                <CCardBody>
+                    <CCardText>
+                        <p><span>Телефон: </span>
+                            <span>53465487</span></p>
+                        <p><span>email: </span>
+                            <span>example@gmail.com</span></p>
+
+
+                    </CCardText>
+                </CCardBody>
+            </CCard>
+
             </div>
-            <div className={"main_container_right_block"}>
-                <h2 className={"main_container_right_block_title"}>Фото</h2>
-                <div className={"main_container_right_block_image"}>
-                    <img className={"main_container_right_block_about_me_image"} src={"images/avatar.jpg"} alt={"avatar"}/>
-                </div>
+            <div>
+                <CCard color='dark'  textColor='white'>
+                    <CCardImage style={{"width": "100%"}} orientation="top" src='images/PhotoAbout.jpg' />
+                    <CCardBody>
+                    </CCardBody>
+                    <CCardFooter>
+                        <small>Фото</small>
+                    </CCardFooter>
+                </CCard>
+
             </div>
-        </div>
+         </div>
     )
 }
 
