@@ -14,7 +14,7 @@ export default function Navbar() {
     const [visible, setVisible] = useState(false)
     return (
         <>
-            <CNavbar expand="lg" colorScheme="light" style={{ backgroundColor: '#e3f2fd' }}>
+            <CNavbar expand="lg" colorScheme="dark" className="bg-dark">
                 <CContainer fluid>
                     <CNavbarBrand href="/">Главная</CNavbarBrand>
                     <CNavbarToggler
@@ -25,12 +25,24 @@ export default function Navbar() {
                     <CCollapse className="navbar-collapse" visible={visible}>
                         <CNavbarNav>
                             <CNavItem>
-                                <CNavLink href="/image" active>
-                                    Картинка
+                                <CNavLink href="/about" active>
+                                    Обо мне
                                 </CNavLink>
                             </CNavItem>
                             <CNavItem>
-                                <CNavLink href="/calendar">Календарь</CNavLink>
+                                <CNavLink href="/calculator">Калькулятор</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/slides">Слайдшоу</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/shop">Магазин</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/carusel">Доп задание 1</CNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <CNavLink href="/culture">Доп задание 2</CNavLink>
                             </CNavItem>
                         </CNavbarNav>
                     </CCollapse>

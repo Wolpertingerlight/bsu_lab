@@ -1,0 +1,43 @@
+
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.circle-container {
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    border: dashed 1px;
+    border-radius: 50%;
+    margin: 60px auto;
+
+    animation: 20s linear 0s normal none infinite running rot;
+    -webkit-animation: 20s linear 0s normal none infinite running rot;
+    /*width: 100px;*/
+}
+
+.circle-container img { display: block; width: 100px; position: absolute}
+.deg0 {
+    transform: translate(50px, -50px); } /* 12em = half the width of the wrapper */
+.deg72 {
+    transform:  translate(300px, 50px) rotate(0); }
+.deg144 {
+    transform:  translate(300px, 250px) rotate(0); }
+.deg216 {
+    transform: translate(100px, 300px) rotate(0); }
+.deg288 {
+    transform:  translate(-50px,150px) rotate(0); }
+
+
+
+
